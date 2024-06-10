@@ -1,9 +1,9 @@
 <template>
-  <div class="w-full h-auto flex justify-start items-center my-8">
+  <div class="w-full h-auto flex justify-start items-center my-8 sm:my-4">
     <RouterLink
       v-for="(link, index) in navLinks"
       :key="index"
-      class="p-4 font-roboto font-bold text-sm text-[#848484]"
+      class="p-4 font-roboto font-bold text-sm text-[#848484] sm:text-base"
       :to="link.route"
     >
       {{ link.label }}
