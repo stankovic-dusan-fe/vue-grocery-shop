@@ -1,5 +1,7 @@
 <template>
-  <div class="w-full bg-white flex flex-col rounded-2xl px-4 py-6 shadow-custom select-none">
+  <div
+    class="w-full bg-white flex flex-col justify-between rounded-2xl px-4 py-6 shadow-custom select-none"
+  >
     <div class="w-full h-auto flex justify-end">
       <Heart
         v-if="product.favorite === true"
@@ -17,9 +19,9 @@
       />
     </div>
     <div class="w-[200px] h-[200px] self-center flex justify-center items-center">
-      <img :src="image" alt="product-img" class="w-[80%] h-[80%]" />
+      <img :src="`/src/assets/images/${image}.png`" alt="product-img" class="w-[80%] h-[80%]" />
     </div>
-    <div class="w-full h-[88px] my-6">
+    <div class="w-full flex flex-col justify-between flex-1 h-auto my-6">
       <h6 class="font-robotoSlab font-bold text-2xl text-[#262626]">{{ name }}</h6>
       <p class="font-robotoSlab font-normal text-sm text-[#787878]">{{ description }}</p>
       <h6 class="font-robotoSlab font-bold text-xl text-[#262626] mt-2">

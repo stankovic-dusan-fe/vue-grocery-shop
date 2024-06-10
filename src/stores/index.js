@@ -11,7 +11,7 @@ export const useProductsStore = defineStore('products', {
           unit: 'kg',
           quantity: 0,
           description: 'Top quality wagyu beef, grass fed',
-          imageUrl: '/src/assets/images/fine-stake.png'
+          image: 'fine-stake'
         },
         {
           id: 2,
@@ -20,7 +20,7 @@ export const useProductsStore = defineStore('products', {
           unit: 'pcs',
           quantity: 0,
           description: 'Fluffy and fresh, made for your favourite cream',
-          imageUrl: '../assets/images/tasty-bread.png'
+          image: 'tasty-bread'
         },
         {
           id: 3,
@@ -29,7 +29,7 @@ export const useProductsStore = defineStore('products', {
           unit: 'pcs',
           quantity: 0,
           description: 'Made by brown cows',
-          imageUrl: '../assets/images/choco-milk.png'
+          image: 'choco-milk'
         },
         {
           id: 4,
@@ -38,7 +38,7 @@ export const useProductsStore = defineStore('products', {
           unit: 'kg',
           quantity: 0,
           description: 'Fresh, ripe, ready for a salad',
-          imageUrl: '../assets/images/tomatoes.png'
+          image: 'tomatoes'
         },
         {
           id: 5,
@@ -47,7 +47,7 @@ export const useProductsStore = defineStore('products', {
           unit: 'pcs',
           quantity: 0,
           description: 'Genco Pura Olive Oil Company ',
-          imageUrl: '../assets/images/olive-oil.png'
+          image: 'olive-oil'
         },
         {
           id: 6,
@@ -56,7 +56,7 @@ export const useProductsStore = defineStore('products', {
           unit: 'kg',
           quantity: 0,
           description: 'Imported directly from Banana republic',
-          imageUrl: '../assets/images/bananas.png'
+          image: 'bananas'
         }
       ],
       cart: [],
@@ -87,8 +87,8 @@ export const useProductsStore = defineStore('products', {
     addToFavorite(product) {
       product.favorite = !product.favorite
     },
-    getProductImg(imageUrl) {
-      return new URL(imageUrl, import.meta.url).href
+    getProductImg(image) {
+      return new URL(image, import.meta.url).href
     }
   },
   getters: {

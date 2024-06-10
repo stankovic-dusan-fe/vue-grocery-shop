@@ -1,7 +1,7 @@
 <template>
-  <div class="w-full h-full flex flex-col justify-center items-center px-20 py-12">
-    <div class="md:w-full lg:max-w-[1520px]">
-      <h1 class="font-robotoSlab font-bold text-4xl">Your regular grocery shop</h1>
+  <div class="max-w-[1600px] h-full mx-auto py-12 px-10">
+    <div class="w-full">
+      <h1 class="font-robotoSlab font-bold text-4xl">Vue regular grocery shop</h1>
       <TheNavigation />
       <RouterView />
     </div>
