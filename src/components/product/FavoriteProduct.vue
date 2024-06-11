@@ -4,7 +4,7 @@
   >
     <div class="w-full h-auto flex justify-end"></div>
     <div class="w-[200px] h-[200px] self-center flex justify-center items-center">
-      <img :src="`/src/assets/images/${image}.png`" alt="product-img" class="w-[80%] h-[80%]" />
+      <img :src="`/images/${image}.png`" alt="product-img" class="w-[80%] h-[80%]" />
     </div>
     <div class="w-full flex flex-1 flex-col justify-between h-auto my-6">
       <h6 class="font-robotoSlab font-bold text-2xl text-[#262626]">{{ name }}</h6>
@@ -18,16 +18,5 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
-import { useProductsStore } from '@/stores/index'
-
 const props = defineProps(['product', 'name', 'image', 'description', 'price', 'unit'])
-
-const productsStore = useProductsStore()
-
-const iconSize = ref(20)
-
-const addProductToFavorite = (product) => {
-  productsStore.addToFavorite(product)
-}
 </script>
